@@ -249,11 +249,12 @@ sup {
 }
 
 a {
-  color: #2b2b2b;
-  text-decoration: none;
+  color: #111111;
+  text-decoration: underline;
+  font-family: var(--bs-font-monospace);
 }
 a:hover {
-  color: #7c7c7c;
+  color: #b8b8b8;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -3795,7 +3796,7 @@ textarea.form-control-lg {
 }
 .dropdown-menu-dark .dropdown-item:hover, .dropdown-menu-dark .dropdown-item:focus {
   color: #fff;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.108);
 }
 .dropdown-menu-dark .dropdown-item.active, .dropdown-menu-dark .dropdown-item:active {
   color: #fff;
@@ -3898,6 +3899,7 @@ textarea.form-control-lg {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
+  margin-left:1rem;
   color: #212529;
   /*transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;*/
 }
@@ -4497,7 +4499,7 @@ textarea.form-control-lg {
 
 .card-title {
   margin-bottom: 0.5rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 .card-subtitle {
@@ -4557,8 +4559,14 @@ textarea.form-control-lg {
   object-fit: cover;
 }
 
+.card-img2 {
+  height: 30vh;
+  object-fit: none;
+}
+
 .card-group > .card {
   padding: 0.75rem;
+  min-width:60%;
 }
 @media (min-width: 576px) {
   .card-group {
@@ -4569,6 +4577,26 @@ textarea.form-control-lg {
     flex: 1 0 0%;
   }
   .card-group > .card + .card {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+.card-group2 > .card {
+  padding: 0.75rem;
+  flex: 1 0 auto;
+  min-width:25%;
+  max-width:30%;
+}
+@media (min-width: 576px) {
+  .card-group2 {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .card-group2 > .card {
+    flex: 1 0 0%;
+  }
+  .card-group2 > .card + .card {
     margin-left: 1rem;
     margin-right: 1rem;
   }
@@ -7420,6 +7448,15 @@ textarea.form-control-lg {
 
 .text-decoration-line-through {
   text-decoration: line-through !important;
+}
+
+.text-link {
+  color: #fff;
+  font-weight:100;
+}
+
+.text-link:hover {
+  color: #b8b8b8;
 }
 
 .text-lowercase {
@@ -11165,7 +11202,7 @@ header.masthead:before {
 header.masthead .page-heading,
 header.masthead .post-heading,
 header.masthead .site-heading {
-  color: #fff;
+  color: #b8b8b8;
 }
 header.masthead .page-heading,
 header.masthead .site-heading {
