@@ -3901,7 +3901,7 @@ textarea.form-control-lg {
   display: block;
   padding: 0.5rem 1rem;
   margin-left:1rem;
-  color: #212529;
+  color: #0085A1;
   /*transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;*/
 }
 @media (prefers-reduced-motion: reduce) {
@@ -3910,7 +3910,7 @@ textarea.form-control-lg {
   }
 }
 .nav-link:hover, .nav-link:focus {
-  color: #0085A1;
+  color: #212529;
 }
 .nav-link.disabled {
   color: #6c757d;
@@ -4026,7 +4026,7 @@ textarea.form-control-lg {
 }
 
 .navbar .nav-link.active {
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 6px;
 }
