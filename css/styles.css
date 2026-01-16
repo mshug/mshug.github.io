@@ -4023,6 +4023,13 @@ textarea.form-control-lg {
   padding-right: 0;
   padding-left: 0;
 }
+
+.navbar .nav-link.active {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
 .navbar-nav .dropdown-menu {
   position: static;
 }
