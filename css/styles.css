@@ -1,0 +1,124 @@
+/*Base setup*/
+
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  padding-top: 70px; /* space for fixed navbar */
+}
+
+/*Navbar*/
+
+#mainNav {
+  background-color: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+#mainNav .nav-link {
+  color: #111;
+  font-weight: 500;
+}
+
+#mainNav .nav-link:hover {
+  text-decoration: underline;
+}
+
+#mainNav .nav-link.active {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/*Masthead*/
+
+header.masthead {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 6rem 0;
+  color: white;
+}
+
+header.masthead::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+header.masthead .container {
+  position: relative;
+  z-index: 2;
+}
+
+.site-heading h1 {
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.site-heading .subheading {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+/*Section headers*/
+
+.section-header button {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.section-header button::after {
+  content: "▾";
+  margin-left: 0.5rem;
+  font-size: 0.8em;
+}
+
+.section-header button[aria-expanded="true"]::after {
+  content: "▴";
+}
+
+/*Cards*/
+
+.card {
+  border: none;
+}
+
+.card-img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.card-img-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 1rem;
+}
+
+.card-title,
+.card-subtitle {
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.card-title a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.card-title a:hover {
+  text-decoration: underline;
+}
+
+/*Footer*/
+
+footer {
+  margin-top: 4rem;
+}
+
+footer .fa-circle {
+  color: #000;
+}
