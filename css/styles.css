@@ -1,4 +1,9 @@
 /* GLOBAL */
+:root {
+  --bs-primary: #000000;
+  --bs-focus-ring-color: rgba(0, 0, 0, 0.25);
+  --bs-border-radius: 0;
+}
 
 body {
   font-family: "PT Sans", "Open Sans", Arial, sans-serif;
@@ -36,46 +41,125 @@ body {
 }
 
 /* HEADER / MASTHEAD */
-
+.masthead::before {
+  background-color: transparent;
+}
 .masthead {
+  min-height: 30vh;
+  background: url("../assets/img/about/krug1.png") top center / contain no-repeat fixed;
+  opacity: 0.8;
   position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   padding: 6rem 0;
   color: #ffffff;
 }
 
 .site-heading h1 {
   font-weight: 700;
+  font-size: 2.7rem;
 }
 
 .site-heading .subheading {
   display: block;
-  font-size: 1rem;
+  font-size: 1.2rem;
   opacity: 0.85;
 }
 
 /* SECTION HEADERS */
 
+h2,
+.h2 {
+  font-weight: 700;
+  font-family:monospace;
+  font-size:x-large;
+}
+
 h4,
 .h4 {
-  font-weight: 700;
+  font-weight: 400;
+  font-family: monospace;
+  font-size: medium;
 }
 
 h6,
 .h6 {
-  font-weight: 400;
+  font-weight:300;
+  font-size:small;
+  font-family:sans-serif;
+  line-height: 2em;
 }
 
 /* CARDS */
 
 .card {
   border: none;
+  height: 250px;
+  overflow:hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
 }
 
 .card.bg-dark {
   background-color: #000;
+}
+
+@media (max-width: 768px) {
+  .card {
+    height: 220px;
+  }
+}
+
+/* accordian button */
+
+.accordion-button {
+  position: relative;
+  padding-left: 2.5rem;
+  background-color: #fff;
+  box-shadow: 0 0 0 0.1rem #ccc;
+  color: inherit;
+}
+
+.accordion-button:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 0 0 0.1rem #999;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #fff;
+  box-shadow: 0 0 0 0.1rem #000;
+  color: #000;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.1rem #000;
+}
+
+.accordion-button::after {
+  display: none;
+}
+
+.accordion-button::before {
+  content: "^";
+  position: absolute;
+  left: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.accordion-button:not(.collapsed)::before {
+  transform: rotate(180deg);
+}
+
+.accordion-item,
+.accordion-collapse {
+  border: 0;
+}
+
+.accordion-item:has(.accordion-button:not(.collapsed)) {
+  box-shadow: 0 0 0 0.1rem #666;
 }
 
 /* Center overlay text */
@@ -106,17 +190,6 @@ h6,
   text-decoration: underline;
 }
 
-/* CUSTOM CARD GROUP WRAPPER */
-
-.card-group2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1rem;
-}
-.card-group2 .card {
-  width: auto;
-}
-
 /* FOOTER */
 
 footer {
@@ -129,4 +202,26 @@ footer .fa-stack {
 
 footer .fa-stack:hover {
   opacity: 0.8;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0rem;
+}
+
+.footer-links a {
+  color: #888;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #000;
+}
+
+* {
+  border-radius: 0 !important;
 }
